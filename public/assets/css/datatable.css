@@ -1,0 +1,232 @@
+.datatable-wrapper {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.datatable-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.entries-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6c757d;
+}
+.entries-select {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.search-box {
+    position: relative;
+    margin-left: auto;
+}
+
+.search-input {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 8px 35px 8px 12px;
+    font-size: 14px;
+    width: 250px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.datatable-table {
+    margin: 0;
+}
+
+.datatable-table th {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    padding: 12px 15px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.datatable-table th.sortable:hover {
+    background: #e9ecef;
+}
+
+.datatable-table th.sortable::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #adb5bd;
+    position: absolute;
+    right: 8px;
+    top: 47%;
+    transform: translateY(-50%);
+}
+.datatable-table th.sortable::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #adb5bd;
+    position: absolute;
+    right: 8px;
+    top: 57%;
+    transform: translateY(-50%) translateY(2px);
+}
+
+.datatable-table th.sortable.up-sort::after {
+    border-bottom-color: #495057;
+}
+.datatable-table th.sortable.down-sort::before {
+    border-top-color: #495057;
+}
+/*
+.datatable-table th.sort-asc::before {
+    border-top-color: #495057;
+}
+
+.datatable-table th.sort-asc::after {
+    border-bottom-color: #adb5bd;
+}
+
+.datatable-table th.sort-desc::after {
+    border-bottom-color: #495057;
+}
+
+.datatable-table th.sort-desc::before {
+    border-top-color: #adb5bd;
+} */
+
+.datatable-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.datatable-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.datatable-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.showing-info {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.pagination-wrapper .pagination {
+    margin: 0;
+}
+@media only screen and (max-width: 1374.9px) {
+    .pagination-wrapper .pagination {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+}
+
+.pagination .page-link {
+    color: #495057;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+}
+
+.pagination .page-item.active .page-link {
+    background: #0d6efd;
+    border-color: #0d6efd;
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #495057;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.reset-data-t-btn i {
+    transform: rotate(0deg);
+    transition: transform 1s ease-in-out;
+}
+
+.reset-data-t-btn.rotate-360 i {
+    animation: rotation 1s ease-in-out;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .datatable-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        margin-left: 0;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .datatable-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .datatable-table {
+        font-size: 14px;
+    }
+
+    .datatable-table th,
+    .datatable-table td {
+        padding: 8px 10px;
+    }
+}

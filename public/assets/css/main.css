@@ -1,0 +1,62 @@
+.low-stocks {
+    position: fixed;
+    bottom: 15px;
+    right: 25px;
+    z-index: 1000000;
+}
+
+.low-stocks .low-stock-notification {
+    margin-top: 0.25rem;
+    padding: 7px 15px 7px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgb(239, 234, 227);
+    color: rgb(112, 110, 110);
+    border: 2px solid rgb(125, 124, 124);
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 10%);
+    z-index: 1000000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 500px;
+    max-height: 0; /* <-- use max-height */
+    overflow: hidden; /* important */
+    animation: lowStockAnimation 1.5s ease-in-out forwards;
+}
+.low-stocks .low-stock-notification.hide {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100px;
+    animation: lowStockAnimationHide 1.5s ease-in-out forwards;
+}
+
+@keyframes lowStockAnimation {
+    from {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        max-height: 100px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@keyframes lowStockAnimationHide {
+    from {
+        max-height: 100px;
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.low-stocks .low-stock-notification button {
+    padding: 0.15rem 0.23rem;
+}

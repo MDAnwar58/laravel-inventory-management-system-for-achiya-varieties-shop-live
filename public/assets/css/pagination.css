@@ -1,0 +1,18 @@
+.product-table-footer .pagination .prev.disabled button,
+.customer-table-footer .pagination .prev.disabled button {
+    background-color: #d3d6da !important;
+}
+.product-table-footer .pagination .next.disabled button,
+.customer-table-footer .pagination .next.disabled button {
+    background-color: #d3d6da !important;
+}
+.product-table-footer .pagination .page-item.active button,
+.customer-table-footer .pagination .page-item.active button {
+    background-color: #2b3a4c !important;
+    border-color: #2b3a4c;
+    color: white;
+}
+.product-table-footer .pagination .page-item button,
+.customer-table-footer .pagination .page-item button {
+    color: #2b3a4c;
+}

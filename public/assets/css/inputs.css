@@ -1,0 +1,44 @@
+.form-select.custom-select {
+    border: 2px solid #0d6efd;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+}
+
+.form-select.custom-select:focus {
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control.custom-input {
+    border: 2px solid #0d6efd;
+    border-radius: 12px;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+}
+
+.form-control.custom-input:focus {
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Style the options inside dropdown */
+.form-select.custom-select option {
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* Individual option styles */
+.form-select.custom-select option[value="active"] {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.form-select.custom-select option[value="deactive"] {
+    background: #f8d7da;
+    color: #842029;
+}
